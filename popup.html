@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html id="grad1">
+    <head> 
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            @font-face { font-family: Days; src: url('Days.ttf'); } 
+            #grad1 {
+                height: 505px;
+                background-color: rgb(231, 251, 255); /* For browsers that do not support gradients */
+                background: linear-gradient(to bottom right,rgb(171, 255, 200), rgb(168, 239, 255));
+            }
+            body {
+                width: 370px;
+                color: rgb(75, 75, 75);
+                line-height: 24pt;
+                font-size: 11pt;
+            }
+            div {
+                padding-left: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+            }
+            h1 {
+                font-family: Days;
+                color: rgb(51, 53, 211);
+            }
+            h2 {
+                color: rgb(75, 75, 75);
+                line-height: 0pt;
+            }
+            hr {
+                margin-top: 20pt;
+                margin-bottom: 20pt;
+            }
+        </style>
+    </head>
+    <div>
+        <div style="margin-left: 27px;">
+            <div class="title">
+                <h1 style="margin-bottom: 30px;">Extension này</h1>
+                <span class="facebok">lập ra chỉ để xóa bình luận facebook&trade;</span>
+            </div>
+            
+        </div>
+        <hr>
+        <body> 
+            <h2 style="margin-top:0px;">Phương thức xóa</h2>
+
+            <label>Tự động xóa bình luận</label>
+            <label class="switch">
+                <input type="checkbox" id="autoDelete" checked>
+                <span class="slider round"></span>
+            </label>
+
+            <br>
+            <span>Xóa thủ công (alt + x)</span>
+            <button class="button cleanButton" id="deleteComments">Clean</button>
+            <br>
+            <span>Khôi phục thủ công (alt + z)</span>
+            <button class="button restoreButton" id="restoreComments">Restore</button>
+            <hr>
+
+            <h2 style="margin-top:10px">Cài đặt nội dung xóa</h2>
+            <span>Xóa theo tên người dùng</span>
+            <textarea class="tarea" name="" id="keyWordByUserName" cols="30" rows="10" placeholder="Nhập từ khóa mà tên người dùng chứa, cách nhau bằng dấu phẩy. VD: Page này, Trang này"></textarea>
+            <span>Xóa theo nội dung bình luận</span>
+            <textarea class="tarea" name="" id="keyWordByContentComment" cols="30" rows="10" placeholder="Nhập từ khóa mà nội dung bình luận chứa, cách nhau bằng dấu phẩy. VD: chơi đồ, ba sọc"></textarea>
+            
+            <div class="tooltip">
+                    <img class="toolTipIcon" src="/pics/tooltip.png">
+                    <span class="tooltiptext">
+                        Tự động xóa:
+                        <br>
+                        Tự động xóa bình luận ngay lập tức khi bình luận có dấu hiệu nhai lại, spam, xàm lol ngay khi bình luận được tải
+                        <br><br>
+                        Xóa / khôi phục bằng tay:
+                        <br>
+                        Xóa / khôi phục bình luận bằng cách nhấn tổ hợp phím 1 cách thủ công
+                        <br>
+                    </span>
+            </div>
+            <script src="script.js"></script>
+        </body>
+    </div>
+</html>
