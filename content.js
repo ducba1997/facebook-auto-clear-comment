@@ -131,15 +131,19 @@ function changeComments(option) {
   arrKeyWordByContentComment = keyWordByContentComment.split(",");
   var l = document.querySelectorAll(".ecm0bbzt span.oi732d6d .kvgmc6g5>div[dir=auto]");
   var i;
+  console.log(l);
   for (i = 0; i < l.length; i++) {
     var comment = l[i];
     if (checkContainInArray(comment.innerText, arrKeyWordByContentComment)) {
       divSection = comment.closest("li");
-      if (option === "del") {
-        slideOut(divSection);
-      } else {
-        slideIn(divSection);
+      if(divSection){
+        if (option === "del") {
+          slideOut(divSection);
+        } else {
+          slideIn(divSection);
+        }
       }
+      
     }
   }
   var l2 = document.querySelectorAll(".nc684nl6 a.oajrlxb2 span.pq6dq46d span.oi732d6d");
