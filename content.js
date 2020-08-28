@@ -152,10 +152,12 @@ function changeComments(option) {
     var username = l2[k];
     if (checkContainInArray(username.innerText, arrKeyWordByUserName)) {
       divSection2 = username.closest("li");
-      if (option === "del") {
-        slideOut(divSection2);
-      } else {
-        slideIn(divSection2);
+      if(divSection2){
+        if (option === "del") {
+          slideOut(divSection2);
+        } else {
+          slideIn(divSection2);
+        }
       }
     }
   }
