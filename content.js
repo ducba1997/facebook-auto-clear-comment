@@ -8,7 +8,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   }
 });
 
-// Taken from stack overflow, used to detect changes in DOM
 var observeDOM = (function () {
   var MutationObserver =
     window.MutationObserver || window.WebKitMutationObserver;

@@ -4,8 +4,9 @@
     "description": "Xóa mọi bình luận theo cách của bạn!",
     "version": "0.1.1",
     "author": "Bạn Bá giấu tên",
-    "permissions": ["storage"],
+    "permissions": ["storage","contextMenus"],
     "background": {
+        "persistent": false,
         "scripts": ["background.js"]
     },
     "content_scripts": [
